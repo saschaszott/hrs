@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { CompanyService } from 'app/services/company.service';
 import { Observable } from 'rxjs';
 import { CompanyProfile, Offer } from 'app/types';
 import { ActivatedRoute } from '@angular/router';
 import { map, switchMap } from 'rxjs/operators';
+import {CompanyService} from "app/entities/company/company.service";
 
 @Component({
   selector: 'jhi-company-offer-page',
