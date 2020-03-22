@@ -5,32 +5,32 @@ import { of, Observable } from 'rxjs';
 const MOCK_COMPANIES: CompanyProfile[] = [
   {
     id: '1',
-    name: 'Bäcker 123',
-    address: '20km entfernt',
+    name: 'Bäcker A',
+    address: '20 km von Dir entfernt',
     imgSrc: ''
   },
   {
     id: '2',
-    name: 'Bäcker 123',
-    address: '20km entfernt',
+    name: 'Bäcker B',
+    address: '22 km von Dir entfernt',
     imgSrc: ''
   },
   {
     id: '3',
-    name: 'Bauer um die Ecke',
-    address: '20km entfernt',
+    name: 'Bauer C',
+    address: '26 km von Dir entfernt',
     imgSrc: ''
   },
   {
     id: '4',
-    name: 'Bäcker 123',
-    address: '20km entfernt',
+    name: 'Bauer D',
+    address: '200 km von Dir entfernt',
     imgSrc: ''
   },
   {
     id: '5',
-    name: 'Bäcker 123',
-    address: '20km entfernt',
+    name: 'Bäcker E',
+    address: '24 km von Dir entfernt',
     imgSrc: ''
   }
 ];

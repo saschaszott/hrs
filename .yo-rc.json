@@ -38,6 +38,8 @@
     "enableTranslation": true,
     "nativeLanguage": "de",
     "languages": ["de", "en"],
-    "blueprints": []
+    "blueprints": [],
+    "herokuAppName": "humanresourcesharing",
+    "herokuDeployType": "jar"
   }
 }

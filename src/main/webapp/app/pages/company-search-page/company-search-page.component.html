@@ -6,6 +6,8 @@
 
 <ul>
   <li [routerLink]="['../', 'company-offer', company.id]" *ngFor="let company of companies$ | async">
-    {{ company.imgSrc }}, {{ company.name }}, {{ company.address }}
+    <!--{{ company.imgSrc }}, {{ company.name }}, {{ company.address }}-->
+
+      <strong>{{ company.name }}</strong> {{ company.address }}
   </li>
 </ul>

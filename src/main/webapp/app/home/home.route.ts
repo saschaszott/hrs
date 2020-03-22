@@ -4,9 +4,11 @@ import { HomeComponent } from './home.component';
 
 export const HOME_ROUTE: Route = {
   path: '',
-  component: HomeComponent,
+  redirectTo: '/pages/welcome',
+  pathMatch: 'full'
+  /*component: HomeComponent,
   data: {
     authorities: [],
     pageTitle: 'home.title'
-  }
+  }*/
 };

@@ -19,10 +19,6 @@ export class UserWelcomePageComponent {
   }
 
   public continue(): void {
-    const message = `Welcome ${this.firstName} ${this.lastName} located in ${this.address}.`;
-    // TODO: wuerfelda: Remove, just for testing purposes.
-    // eslint-disable-next-line no-console
-    console.log(message);
     this.router.navigate(['../how'], { relativeTo: this.route });
   }
 }
