@@ -1,0 +1,8 @@
+<ng-container *ngIf="profile$ | async as profile">
+    <jhi-avatar [imgSrc]="profile.imgSrc" [heading]="profile.name" [subheading]="profile.address"></jhi-avatar>
+</ng-container>
+<ul>
+    <li *ngFor="let offer of offers$ | async">
+        {{ offer | json }}
+    </li>
+</ul>
