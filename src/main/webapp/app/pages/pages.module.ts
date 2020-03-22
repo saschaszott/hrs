@@ -11,8 +11,7 @@ import { UserProfileCreatedPageComponent } from './user-profile-created-page/use
 import { UserProfileCompetencesPageComponent } from './user-profile-competences-page/user-profile-competences-page.component';
 import { MatchPageComponent } from './match-page/match-page.component';
 import { CompanySearchPageComponent } from './company-search-page/company-search-page.component';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { WirvsvirusSharedModule } from 'app/shared/shared.module';
 
 const PAGES = [
   CompanyPageComponent,
@@ -28,7 +27,7 @@ const PAGES = [
 ];
 
 @NgModule({
-  imports: [CommonModule, FormsModule, PagesRoutingModule],
+  imports: [WirvsvirusSharedModule, PagesRoutingModule],
   declarations: [PAGES, CompanySearchPageComponent]
 })
 export class PagesModule {}
