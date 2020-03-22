@@ -1,3 +1,5 @@
+![HumanResourceSharing Cover Image](/src/main/webapp/content/images/logo.png)
+
 # Human Resource Sharing
 
 Durch die Corona-Krise fallen in zahlreichen Wirtschaftszweigen Jobs weg und Menschen verlieren ihre Arbeit.
@@ -20,5 +22,3 @@ https://humanresourcesharing.herokuapp.com
 erreichbar.
 
 Diese Anwendung ist im Rahmen des WirVsVirus-Hackathons vom 20.03. bis 22.03.2020 entstanden.
-
-![Project Logo](src/main/webapp/content/images/logo.png)
