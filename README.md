@@ -22,3 +22,11 @@ https://humanresourcesharing.herokuapp.com
 erreichbar.
 
 Diese Anwendung ist im Rahmen des WirVsVirus-Hackathons vom 20.03. bis 22.03.2020 entstanden.
+
+## Preview
+
+![Preview]
+(https://cdn.discordapp.com/attachments/690853593917423626/691378038411100190/screens_001.png)
+
+![Preview]
+(https://cdn.discordapp.com/attachments/690853593917423626/691378035210846308/screens_002.png)
