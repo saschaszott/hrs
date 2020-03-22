@@ -12,6 +12,7 @@ import { UserProfileCompetencesPageComponent } from './user-profile-competences-
 import { MatchPageComponent } from './match-page/match-page.component';
 import { CompanySearchPageComponent } from './company-search-page/company-search-page.component';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 const PAGES = [
   CompanyPageComponent,
@@ -27,7 +28,7 @@ const PAGES = [
 ];
 
 @NgModule({
-  imports: [CommonModule, PagesRoutingModule],
+  imports: [CommonModule, FormsModule, PagesRoutingModule],
   declarations: [PAGES, CompanySearchPageComponent]
 })
 export class PagesModule {}
