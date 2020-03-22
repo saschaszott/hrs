@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'jhi-user-welcome-page',
@@ -12,7 +12,7 @@ export class UserWelcomePageComponent {
   public address = '';
   public image = '';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
   public get canContinue(): boolean {
     return this.firstName !== '' && this.lastName !== '' && this.address !== '';
@@ -23,6 +23,6 @@ export class UserWelcomePageComponent {
     // TODO: wuerfelda: Remove, just for testing purposes.
     // eslint-disable-next-line no-console
     console.log(message);
-    this.router.navigate(['how']);
+    this.router.navigate(['../how'], { relativeTo: this.route });
   }
 }

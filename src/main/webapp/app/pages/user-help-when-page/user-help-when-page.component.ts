@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'jhi-user-help-when-page',
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class UserHelpWhenPageComponent {
   public availableDate: Date | undefined;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
   public get canContinue(): boolean {
     return this.availableDate !== undefined;
@@ -20,6 +20,6 @@ export class UserHelpWhenPageComponent {
     // TODO: wuerfelda: Remove, just for testing purposes.
     // eslint-disable-next-line no-console
     console.log(message);
-    this.router.navigate(['created']);
+    this.router.navigate(['../created'], { relativeTo: this.route });
   }
 }

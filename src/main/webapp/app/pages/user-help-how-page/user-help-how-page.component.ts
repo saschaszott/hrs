@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 const MOCK_COMPETENCES = ['Muskelkraft', 'Marketing', 'Öffentlicher Dienst', 'Design', 'Maurer', 'Koordination', 'Livestreaming'];
 
@@ -14,7 +14,7 @@ export class UserHelpHowPageComponent implements OnInit {
 
   public competences$: Observable<string[]> | undefined;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private route: ActivatedRoute) {
     // TODO: wuerfelda: Inject a service fetching all available competences.
   }
 
@@ -36,6 +36,6 @@ export class UserHelpHowPageComponent implements OnInit {
     // TODO: wuerfelda: Remove, just for testing purposes.
     // eslint-disable-next-line no-console
     console.log(message);
-    this.router.navigate(['when']);
+    this.router.navigate(['../when'], { relativeTo: this.route });
   }
 }

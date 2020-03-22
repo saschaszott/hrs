@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'jhi-user-profile-created-page',
@@ -7,9 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./user-profile-created-page.component.scss']
 })
 export class UserProfileCreatedPageComponent {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
   public continue(): void {
-    this.router.navigate(['company-search']);
+    this.router.navigate(['../company-search'], { relativeTo: this.route });
   }
 }
