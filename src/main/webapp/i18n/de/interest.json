@@ -1,0 +1,23 @@
+{
+  "wirvsvirusApp": {
+    "interest": {
+      "home": {
+        "title": "Interests",
+        "createLabel": "Interest erstellen",
+        "createOrEditLabel": "Interest erstellen oder bearbeiten",
+        "notFound": "No Interests found"
+      },
+      "created": "Interest erstellt mit ID {{ param }}",
+      "updated": "Interest aktualisiert mit ID {{ param }}",
+      "deleted": "Interest gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Interest {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Interest"
+      },
+      "interest": "Interest",
+      "userProfile": "User Profile"
+    }
+  }
+}

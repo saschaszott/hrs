@@ -1,0 +1,78 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-offer-heading" jhiTranslate="wirvsvirusApp.offer.home.createOrEditLabel">Create or edit a Offer</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="wirvsvirusApp.offer.title" for="field_title">Title</label>
+                    <input type="text" class="form-control" name="title" id="field_title"
+                           formControlName="title"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="wirvsvirusApp.offer.address" for="field_address">Address</label>
+                    <input type="text" class="form-control" name="address" id="field_address"
+                           formControlName="address"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="wirvsvirusApp.offer.description" for="field_description">Description</label>
+                    <input type="text" class="form-control" name="description" id="field_description"
+                           formControlName="description"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="wirvsvirusApp.offer.telephoneLong" for="field_telephoneLong">Telephone Long</label>
+                    <input type="text" class="form-control" name="telephoneLong" id="field_telephoneLong"
+                           formControlName="telephoneLong"/>
+                </div>
+
+                <div class="form-group">
+                    <label jhiTranslate="wirvsvirusApp.offer.company" for="field_companies">Company</label>
+                    <select class="form-control" id="field_companies" multiple name="companies" formControlName="companies">
+                        <option [ngValue]="getSelected(editForm.get('companies')!.value, companyOption)" *ngFor="let companyOption of companies; trackBy: trackById">{{ companyOption.id }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label jhiTranslate="wirvsvirusApp.offer.workingStyle" for="field_workingStyles">Working Style</label>
+                    <select class="form-control" id="field_workingStyles" multiple name="workingStyles" formControlName="workingStyles">
+                        <option [ngValue]="getSelected(editForm.get('workingStyles')!.value, workingStyleOption)" *ngFor="let workingStyleOption of workingstyles; trackBy: trackById">{{ workingStyleOption.id }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label jhiTranslate="wirvsvirusApp.offer.professionalExperience" for="field_professionalExperiences">Professional Experience</label>
+                    <select class="form-control" id="field_professionalExperiences" multiple name="professionalExperiences" formControlName="professionalExperiences">
+                        <option [ngValue]="getSelected(editForm.get('professionalExperiences')!.value, professionalExperienceOption)" *ngFor="let professionalExperienceOption of professionalexperiences; trackBy: trackById">{{ professionalExperienceOption.id }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label jhiTranslate="wirvsvirusApp.offer.employeeStyle" for="field_employeeStyles">Employee Style</label>
+                    <select class="form-control" id="field_employeeStyles" multiple name="employeeStyles" formControlName="employeeStyles">
+                        <option [ngValue]="getSelected(editForm.get('employeeStyles')!.value, employeeStyleOption)" *ngFor="let employeeStyleOption of employeestyles; trackBy: trackById">{{ employeeStyleOption.id }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

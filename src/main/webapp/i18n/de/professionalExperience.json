@@ -1,0 +1,24 @@
+{
+  "wirvsvirusApp": {
+    "professionalExperience": {
+      "home": {
+        "title": "Professional Experiences",
+        "createLabel": "Professional Experience erstellen",
+        "createOrEditLabel": "Professional Experience erstellen oder bearbeiten",
+        "notFound": "No Professional Experiences found"
+      },
+      "created": "Professional Experience erstellt mit ID {{ param }}",
+      "updated": "Professional Experience aktualisiert mit ID {{ param }}",
+      "deleted": "Professional Experience gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Professional Experience {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Professional Experience"
+      },
+      "professionalExperience": "Professional Experience",
+      "userProfile": "User Profile",
+      "offer": "Offer"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "wirvsvirusApp": {
+    "employeeStyle": {
+      "home": {
+        "title": "Employee Styles",
+        "createLabel": "Employee Style erstellen",
+        "createOrEditLabel": "Employee Style erstellen oder bearbeiten",
+        "notFound": "No Employee Styles found"
+      },
+      "created": "Employee Style erstellt mit ID {{ param }}",
+      "updated": "Employee Style aktualisiert mit ID {{ param }}",
+      "deleted": "Employee Style gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Employee Style {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Employee Style"
+      },
+      "employeeStyle": "Employee Style",
+      "userProfile": "User Profile",
+      "offer": "Offer"
+    }
+  }
+}

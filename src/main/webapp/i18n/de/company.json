@@ -1,0 +1,24 @@
+{
+  "wirvsvirusApp": {
+    "company": {
+      "home": {
+        "title": "Companies",
+        "createLabel": "Company erstellen",
+        "createOrEditLabel": "Company erstellen oder bearbeiten",
+        "notFound": "No Companies found"
+      },
+      "created": "Company erstellt mit ID {{ param }}",
+      "updated": "Company aktualisiert mit ID {{ param }}",
+      "deleted": "Company gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Company {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Company"
+      },
+      "name": "Name",
+      "profilePicture": "Profile Picture",
+      "offer": "Offer"
+    }
+  }
+}

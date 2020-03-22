@@ -1,0 +1,38 @@
+{
+    "name": "ProfessionalExperience",
+    "fields": [
+        {
+            "fieldName": "professionalExperience",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "userProfile",
+            "otherEntityRelationshipName": "professionalExperience",
+            "relationshipName": "userProfile",
+            "otherEntityField": "id",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "offer",
+            "otherEntityRelationshipName": "professionalExperience",
+            "relationshipName": "offer",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20200322150000",
+    "entityTableName": "professional_experience",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

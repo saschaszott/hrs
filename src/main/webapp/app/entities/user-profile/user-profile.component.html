@@ -1,0 +1,100 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="wirvsvirusApp.userProfile.home.title">User Profiles</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-user-profile" [routerLink]="['/user-profile/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="wirvsvirusApp.userProfile.home.createLabel">
+            Create a new User Profile
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="userProfiles?.length === 0">
+        <span jhiTranslate="wirvsvirusApp.userProfile.home.notFound">No userProfiles found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="userProfiles?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="wirvsvirusApp.userProfile.firstName">First Name</span></th>
+                    <th scope="col" ><span jhiTranslate="wirvsvirusApp.userProfile.lastName">Last Name</span></th>
+                    <th scope="col" ><span jhiTranslate="wirvsvirusApp.userProfile.address">Address</span></th>
+                    <th scope="col" ><span jhiTranslate="wirvsvirusApp.userProfile.experienceInYears">Experience In Years</span></th>
+                    <th scope="col" ><span jhiTranslate="wirvsvirusApp.userProfile.aboutMe">About Me</span></th>
+                    <th scope="col" ><span jhiTranslate="wirvsvirusApp.userProfile.profilePicture">Profile Picture</span></th>
+                    <th scope="col" ><span jhiTranslate="wirvsvirusApp.userProfile.telephoneLong">Telephone Long</span></th>
+                    <th scope="col" ><span jhiTranslate="wirvsvirusApp.userProfile.interest">Interest</span></th>
+                    <th scope="col" ><span jhiTranslate="wirvsvirusApp.userProfile.workingStyle">Working Style</span></th>
+                    <th scope="col" ><span jhiTranslate="wirvsvirusApp.userProfile.professionalExperience">Professional Experience</span></th>
+                    <th scope="col" ><span jhiTranslate="wirvsvirusApp.userProfile.employeeStyle">Employee Style</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let userProfile of userProfiles ;trackBy: trackId">
+                    <td><a [routerLink]="['/user-profile', userProfile.id, 'view']">{{ userProfile.id }}</a></td>
+                    <td>{{ userProfile.firstName }}</td>
+                    <td>{{ userProfile.lastName }}</td>
+                    <td>{{ userProfile.address }}</td>
+                    <td>{{ userProfile.experienceInYears }}</td>
+                    <td>{{ userProfile.aboutMe }}</td>
+                    <td>
+                        <a *ngIf="userProfile.profilePicture" (click)="openFile(userProfile.profilePictureContentType, userProfile.profilePicture)" jhiTranslate="entity.action.open">open</a>
+                        <span *ngIf="userProfile.profilePicture">{{ userProfile.profilePictureContentType }}, {{ byteSize(userProfile.profilePicture) }}</span>
+                    </td>
+                    <td>{{ userProfile.telephoneLong }}</td>
+                    <td>
+                        <span *ngFor="let interest of userProfile.interests; let last = last">
+                            <a class="form-control-static" [routerLink]="['/interest', interest?.id, 'view']">{{ interest.id }}</a>{{ last ? '' : ', ' }}
+                        </span>
+                    </td>
+                    <td>
+                        <span *ngFor="let workingStyle of userProfile.workingStyles; let last = last">
+                            <a class="form-control-static" [routerLink]="['/working-style', workingStyle?.id, 'view']">{{ workingStyle.id }}</a>{{ last ? '' : ', ' }}
+                        </span>
+                    </td>
+                    <td>
+                        <span *ngFor="let professionalExperience of userProfile.professionalExperiences; let last = last">
+                            <a class="form-control-static" [routerLink]="['/professional-experience', professionalExperience?.id, 'view']">{{ professionalExperience.id }}</a>{{ last ? '' : ', ' }}
+                        </span>
+                    </td>
+                    <td>
+                        <span *ngFor="let employeeStyle of userProfile.employeeStyles; let last = last">
+                            <a class="form-control-static" [routerLink]="['/employee-style', employeeStyle?.id, 'view']">{{ employeeStyle.id }}</a>{{ last ? '' : ', ' }}
+                        </span>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/user-profile', userProfile.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/user-profile', userProfile.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(userProfile)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

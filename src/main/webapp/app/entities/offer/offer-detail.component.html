@@ -1,0 +1,66 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="offer">
+            <h2><span jhiTranslate="wirvsvirusApp.offer.detail.title">Offer</span> {{ offer.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="wirvsvirusApp.offer.title">Title</span></dt>
+                <dd>
+                    <span>{{ offer.title }}</span>
+                </dd>
+                <dt><span jhiTranslate="wirvsvirusApp.offer.address">Address</span></dt>
+                <dd>
+                    <span>{{ offer.address }}</span>
+                </dd>
+                <dt><span jhiTranslate="wirvsvirusApp.offer.description">Description</span></dt>
+                <dd>
+                    <span>{{ offer.description }}</span>
+                </dd>
+                <dt><span jhiTranslate="wirvsvirusApp.offer.telephoneLong">Telephone Long</span></dt>
+                <dd>
+                    <span>{{ offer.telephoneLong }}</span>
+                </dd>
+                <dt><span jhiTranslate="wirvsvirusApp.offer.company">Company</span></dt>
+                <dd>
+                    <span *ngFor="let company of offer.companies; let last = last">
+                        <a [routerLink]="['/company', company?.id, 'view']">{{ company.id }}</a>{{ last ? '' : ', ' }}
+                    </span>
+                </dd>
+                <dt><span jhiTranslate="wirvsvirusApp.offer.workingStyle">Working Style</span></dt>
+                <dd>
+                    <span *ngFor="let workingStyle of offer.workingStyles; let last = last">
+                        <a [routerLink]="['/working-style', workingStyle?.id, 'view']">{{ workingStyle.id }}</a>{{ last ? '' : ', ' }}
+                    </span>
+                </dd>
+                <dt><span jhiTranslate="wirvsvirusApp.offer.professionalExperience">Professional Experience</span></dt>
+                <dd>
+                    <span *ngFor="let professionalExperience of offer.professionalExperiences; let last = last">
+                        <a [routerLink]="['/professional-experience', professionalExperience?.id, 'view']">{{ professionalExperience.id }}</a>{{ last ? '' : ', ' }}
+                    </span>
+                </dd>
+                <dt><span jhiTranslate="wirvsvirusApp.offer.employeeStyle">Employee Style</span></dt>
+                <dd>
+                    <span *ngFor="let employeeStyle of offer.employeeStyles; let last = last">
+                        <a [routerLink]="['/employee-style', employeeStyle?.id, 'view']">{{ employeeStyle.id }}</a>{{ last ? '' : ', ' }}
+                    </span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/offer', offer.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

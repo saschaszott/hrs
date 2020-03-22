@@ -1,0 +1,32 @@
+{
+  "wirvsvirusApp": {
+    "userProfile": {
+      "home": {
+        "title": "User Profiles",
+        "createLabel": "User Profile erstellen",
+        "createOrEditLabel": "User Profile erstellen oder bearbeiten",
+        "notFound": "No User Profiles found"
+      },
+      "created": "User Profile erstellt mit ID {{ param }}",
+      "updated": "User Profile aktualisiert mit ID {{ param }}",
+      "deleted": "User Profile gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll User Profile {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "User Profile"
+      },
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "address": "Address",
+      "experienceInYears": "Experience In Years",
+      "aboutMe": "About Me",
+      "profilePicture": "Profile Picture",
+      "telephoneLong": "Telephone Long",
+      "interest": "Interest",
+      "workingStyle": "Working Style",
+      "professionalExperience": "Professional Experience",
+      "employeeStyle": "Employee Style"
+    }
+  }
+}

@@ -1,45 +1,45 @@
 entity UserProfile {
-	id Number required,
+	id Long required,
 	firstName String,
 	lastName String,
 	address String,
-	experienceInYears Number,
+	experienceInYears Long,
 	aboutMe String,
 	profilePicture Blob,
-	telephoneNumber String
+	telephoneLong String
 }
 
 entity Interest {
-	id Number required,
+	id Long required,
 	interest String
 }
 
 entity Offer {
-	id Number required,
+	id Long required,
 	title String,
 	address String,
 	description String
-	telephoneNumber String
+	telephoneLong String
 }
 
 entity Company {
-	id Number required,
+	id Long required,
 	name String,
 	profilePicture Blob
 }
 
 entity EmployeeStyle {
-	id Number required,
+	id Long required,
 	employeeStyle String
 }
 
 entity ProfessionalExperience {
-	id Number required,
+	id Long required,
 	professionalExperience String
 }
 
 entity WorkingStyle {
-	id Number required,
+	id Long required,
 	workingStyle String
 }
 

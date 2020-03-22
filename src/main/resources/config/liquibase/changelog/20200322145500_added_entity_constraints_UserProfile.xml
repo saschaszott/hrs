@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <!--
+        Added the constraints for entity UserProfile.
+    -->
+    <changeSet id="20200322145500-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="user_profile_id"
+                                 baseTableName="user_profile_interest"
+                                 constraintName="fk_user_profile_interest_user_profile_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_profile"/>
+
+        <addForeignKeyConstraint baseColumnNames="interest_id"
+                                 baseTableName="user_profile_interest"
+                                 constraintName="fk_user_profile_interest_interest_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="interest"/>
+        
+        <addForeignKeyConstraint baseColumnNames="user_profile_id"
+                                 baseTableName="user_profile_working_style"
+                                 constraintName="fk_user_profile_working_style_user_profile_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_profile"/>
+
+        <addForeignKeyConstraint baseColumnNames="working_style_id"
+                                 baseTableName="user_profile_working_style"
+                                 constraintName="fk_user_profile_working_style_working_style_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="working_style"/>
+        
+        <addForeignKeyConstraint baseColumnNames="user_profile_id"
+                                 baseTableName="user_profile_professional_experience"
+                                 constraintName="fk_user_profile_professional_experience_user_profile_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_profile"/>
+
+        <addForeignKeyConstraint baseColumnNames="professional_experience_id"
+                                 baseTableName="user_profile_professional_experience"
+                                 constraintName="user_profile_professional_expe_professional_experience_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="professional_experience"/>
+        
+        <addForeignKeyConstraint baseColumnNames="user_profile_id"
+                                 baseTableName="user_profile_employee_style"
+                                 constraintName="fk_user_profile_employee_style_user_profile_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_profile"/>
+
+        <addForeignKeyConstraint baseColumnNames="employee_style_id"
+                                 baseTableName="user_profile_employee_style"
+                                 constraintName="fk_user_profile_employee_style_employee_style_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="employee_style"/>
+        
+    </changeSet>
+</databaseChangeLog>

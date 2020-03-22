@@ -1,0 +1,29 @@
+{
+  "wirvsvirusApp": {
+    "offer": {
+      "home": {
+        "title": "Offers",
+        "createLabel": "Create a new Offer",
+        "createOrEditLabel": "Create or edit a Offer",
+        "notFound": "No Offers found"
+      },
+      "created": "A new Offer is created with identifier {{ param }}",
+      "updated": "A Offer is updated with identifier {{ param }}",
+      "deleted": "A Offer is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Offer {{ id }}?"
+      },
+      "detail": {
+        "title": "Offer"
+      },
+      "title": "Title",
+      "address": "Address",
+      "description": "Description",
+      "telephoneLong": "Telephone Long",
+      "company": "Company",
+      "workingStyle": "Working Style",
+      "professionalExperience": "Professional Experience",
+      "employeeStyle": "Employee Style"
+    }
+  }
+}

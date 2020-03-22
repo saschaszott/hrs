@@ -1,0 +1,24 @@
+{
+  "wirvsvirusApp": {
+    "workingStyle": {
+      "home": {
+        "title": "Working Styles",
+        "createLabel": "Working Style erstellen",
+        "createOrEditLabel": "Working Style erstellen oder bearbeiten",
+        "notFound": "No Working Styles found"
+      },
+      "created": "Working Style erstellt mit ID {{ param }}",
+      "updated": "Working Style aktualisiert mit ID {{ param }}",
+      "deleted": "Working Style gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Working Style {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Working Style"
+      },
+      "workingStyle": "Working Style",
+      "userProfile": "User Profile",
+      "offer": "Offer"
+    }
+  }
+}

@@ -44,6 +44,29 @@ public class CacheConfiguration {
             createCache(cm, de.wvv.domain.User.class.getName() + ".authorities");
             createCache(cm, de.wvv.domain.PersistentToken.class.getName());
             createCache(cm, de.wvv.domain.User.class.getName() + ".persistentTokens");
+            createCache(cm, de.wvv.domain.UserProfile.class.getName());
+            createCache(cm, de.wvv.domain.UserProfile.class.getName() + ".interests");
+            createCache(cm, de.wvv.domain.UserProfile.class.getName() + ".workingStyles");
+            createCache(cm, de.wvv.domain.UserProfile.class.getName() + ".professionalExperiences");
+            createCache(cm, de.wvv.domain.UserProfile.class.getName() + ".employeeStyles");
+            createCache(cm, de.wvv.domain.Interest.class.getName());
+            createCache(cm, de.wvv.domain.Interest.class.getName() + ".userProfiles");
+            createCache(cm, de.wvv.domain.Offer.class.getName());
+            createCache(cm, de.wvv.domain.Offer.class.getName() + ".companies");
+            createCache(cm, de.wvv.domain.Offer.class.getName() + ".workingStyles");
+            createCache(cm, de.wvv.domain.Offer.class.getName() + ".professionalExperiences");
+            createCache(cm, de.wvv.domain.Offer.class.getName() + ".employeeStyles");
+            createCache(cm, de.wvv.domain.Company.class.getName());
+            createCache(cm, de.wvv.domain.Company.class.getName() + ".offers");
+            createCache(cm, de.wvv.domain.EmployeeStyle.class.getName());
+            createCache(cm, de.wvv.domain.EmployeeStyle.class.getName() + ".userProfiles");
+            createCache(cm, de.wvv.domain.EmployeeStyle.class.getName() + ".offers");
+            createCache(cm, de.wvv.domain.ProfessionalExperience.class.getName());
+            createCache(cm, de.wvv.domain.ProfessionalExperience.class.getName() + ".userProfiles");
+            createCache(cm, de.wvv.domain.ProfessionalExperience.class.getName() + ".offers");
+            createCache(cm, de.wvv.domain.WorkingStyle.class.getName());
+            createCache(cm, de.wvv.domain.WorkingStyle.class.getName() + ".userProfiles");
+            createCache(cm, de.wvv.domain.WorkingStyle.class.getName() + ".offers");
             // jhipster-needle-ehcache-add-entry
         };
     }

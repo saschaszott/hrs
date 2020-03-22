@@ -1,0 +1,81 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="userProfile">
+            <h2><span jhiTranslate="wirvsvirusApp.userProfile.detail.title">User Profile</span> {{ userProfile.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="wirvsvirusApp.userProfile.firstName">First Name</span></dt>
+                <dd>
+                    <span>{{ userProfile.firstName }}</span>
+                </dd>
+                <dt><span jhiTranslate="wirvsvirusApp.userProfile.lastName">Last Name</span></dt>
+                <dd>
+                    <span>{{ userProfile.lastName }}</span>
+                </dd>
+                <dt><span jhiTranslate="wirvsvirusApp.userProfile.address">Address</span></dt>
+                <dd>
+                    <span>{{ userProfile.address }}</span>
+                </dd>
+                <dt><span jhiTranslate="wirvsvirusApp.userProfile.experienceInYears">Experience In Years</span></dt>
+                <dd>
+                    <span>{{ userProfile.experienceInYears }}</span>
+                </dd>
+                <dt><span jhiTranslate="wirvsvirusApp.userProfile.aboutMe">About Me</span></dt>
+                <dd>
+                    <span>{{ userProfile.aboutMe }}</span>
+                </dd>
+                <dt><span jhiTranslate="wirvsvirusApp.userProfile.profilePicture">Profile Picture</span></dt>
+                <dd>
+                    <div *ngIf="userProfile.profilePicture">
+                        <a (click)="openFile(userProfile?.profilePictureContentType!, userProfile?.profilePicture)" jhiTranslate="entity.action.open">open</a>
+                        {{ userProfile.profilePictureContentType }}, {{ byteSize(userProfile.profilePicture) }}
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="wirvsvirusApp.userProfile.telephoneLong">Telephone Long</span></dt>
+                <dd>
+                    <span>{{ userProfile.telephoneLong }}</span>
+                </dd>
+                <dt><span jhiTranslate="wirvsvirusApp.userProfile.interest">Interest</span></dt>
+                <dd>
+                    <span *ngFor="let interest of userProfile.interests; let last = last">
+                        <a [routerLink]="['/interest', interest?.id, 'view']">{{ interest.id }}</a>{{ last ? '' : ', ' }}
+                    </span>
+                </dd>
+                <dt><span jhiTranslate="wirvsvirusApp.userProfile.workingStyle">Working Style</span></dt>
+                <dd>
+                    <span *ngFor="let workingStyle of userProfile.workingStyles; let last = last">
+                        <a [routerLink]="['/working-style', workingStyle?.id, 'view']">{{ workingStyle.id }}</a>{{ last ? '' : ', ' }}
+                    </span>
+                </dd>
+                <dt><span jhiTranslate="wirvsvirusApp.userProfile.professionalExperience">Professional Experience</span></dt>
+                <dd>
+                    <span *ngFor="let professionalExperience of userProfile.professionalExperiences; let last = last">
+                        <a [routerLink]="['/professional-experience', professionalExperience?.id, 'view']">{{ professionalExperience.id }}</a>{{ last ? '' : ', ' }}
+                    </span>
+                </dd>
+                <dt><span jhiTranslate="wirvsvirusApp.userProfile.employeeStyle">Employee Style</span></dt>
+                <dd>
+                    <span *ngFor="let employeeStyle of userProfile.employeeStyles; let last = last">
+                        <a [routerLink]="['/employee-style', employeeStyle?.id, 'view']">{{ employeeStyle.id }}</a>{{ last ? '' : ', ' }}
+                    </span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/user-profile', userProfile.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

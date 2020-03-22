@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <!--
+        Added the constraints for entity Offer.
+    -->
+    <changeSet id="20200322145700-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="offer_id"
+                                 baseTableName="offer_company"
+                                 constraintName="fk_offer_company_offer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="offer"/>
+
+        <addForeignKeyConstraint baseColumnNames="company_id"
+                                 baseTableName="offer_company"
+                                 constraintName="fk_offer_company_company_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="company"/>
+        
+        <addForeignKeyConstraint baseColumnNames="offer_id"
+                                 baseTableName="offer_working_style"
+                                 constraintName="fk_offer_working_style_offer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="offer"/>
+
+        <addForeignKeyConstraint baseColumnNames="working_style_id"
+                                 baseTableName="offer_working_style"
+                                 constraintName="fk_offer_working_style_working_style_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="working_style"/>
+        
+        <addForeignKeyConstraint baseColumnNames="offer_id"
+                                 baseTableName="offer_professional_experience"
+                                 constraintName="fk_offer_professional_experience_offer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="offer"/>
+
+        <addForeignKeyConstraint baseColumnNames="professional_experience_id"
+                                 baseTableName="offer_professional_experience"
+                                 constraintName="fk_offer_professional_experience_professional_experience_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="professional_experience"/>
+        
+        <addForeignKeyConstraint baseColumnNames="offer_id"
+                                 baseTableName="offer_employee_style"
+                                 constraintName="fk_offer_employee_style_offer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="offer"/>
+
+        <addForeignKeyConstraint baseColumnNames="employee_style_id"
+                                 baseTableName="offer_employee_style"
+                                 constraintName="fk_offer_employee_style_employee_style_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="employee_style"/>
+        
+    </changeSet>
+</databaseChangeLog>

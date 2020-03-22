@@ -1,0 +1,29 @@
+{
+  "wirvsvirusApp": {
+    "offer": {
+      "home": {
+        "title": "Offers",
+        "createLabel": "Offer erstellen",
+        "createOrEditLabel": "Offer erstellen oder bearbeiten",
+        "notFound": "No Offers found"
+      },
+      "created": "Offer erstellt mit ID {{ param }}",
+      "updated": "Offer aktualisiert mit ID {{ param }}",
+      "deleted": "Offer gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Offer {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Offer"
+      },
+      "title": "Title",
+      "address": "Address",
+      "description": "Description",
+      "telephoneLong": "Telephone Long",
+      "company": "Company",
+      "workingStyle": "Working Style",
+      "professionalExperience": "Professional Experience",
+      "employeeStyle": "Employee Style"
+    }
+  }
+}
