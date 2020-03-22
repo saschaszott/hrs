@@ -25,8 +25,6 @@ Diese Anwendung ist im Rahmen des WirVsVirus-Hackathons vom 20.03. bis 22.03.202
 
 ## Preview
 
-![Preview]
-(https://cdn.discordapp.com/attachments/690853593917423626/691378038411100190/screens_001.png)
+![Preview 1](https://cdn.discordapp.com/attachments/690853593917423626/691378038411100190/screens_001.png)
 
-![Preview]
-(https://cdn.discordapp.com/attachments/690853593917423626/691378035210846308/screens_002.png)
+![Preview 2](https://cdn.discordapp.com/attachments/690853593917423626/691378035210846308/screens_002.png)
