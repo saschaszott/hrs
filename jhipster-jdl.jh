@@ -1,0 +1,56 @@
+entity UserProfile {
+	id Number required,
+	firstName String,
+	lastName String,
+	address String,
+	experienceInYears Number,
+	aboutMe String,
+	profilePicture Blob,
+	telephoneNumber String
+}
+
+entity Interest {
+	id Number required,
+	interest String
+}
+
+entity Offer {
+	id Number required,
+	title String,
+	address String,
+	description String
+	telephoneNumber String
+}
+
+entity Company {
+	id Number required,
+	name String,
+	profilePicture Blob
+}
+
+entity EmployeeStyle {
+	id Number required,
+	employeeStyle String
+}
+
+entity ProfessionalExperience {
+	id Number required,
+	professionalExperience String
+}
+
+entity WorkingStyle {
+	id Number required,
+	workingStyle String
+}
+
+relationship ManyToMany {
+	UserProfile{interest} to Interest{userProfile},
+	UserProfile{workingStyle} to WorkingStyle{userProfile},
+	UserProfile{professionalExperience} to ProfessionalExperience{userProfile},
+	UserProfile{employeeStyle} to EmployeeStyle{userProfile},
+
+	Offer{company} to Company{offer},
+	Offer{workingStyle} to WorkingStyle{offer},
+	Offer{professionalExperience} to ProfessionalExperience{offer},
+	Offer{employeeStyle} to EmployeeStyle{offer}
+}
