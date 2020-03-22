@@ -13,9 +13,9 @@ Weitere Informationen zur Anwendung und dem Team sind eingestellt auf
 
 https://devpost.com/software/16_lokaleunternehmen_human_resource_sharing
 
-Eine Testversion der Anwendung ist unter
+Eine Testversion (leider noch nicht fertig) der Anwendung ist unter
 
-https://humanresourcesharing.herokuapp.com/pages/welcome
+https://humanresourcesharing.herokuapp.com
 
 erreichbar.
 
