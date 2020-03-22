@@ -14,6 +14,11 @@ import { FooterComponent } from './layouts/footer/footer.component';
 import { PageRibbonComponent } from './layouts/profiles/page-ribbon.component';
 import { ActiveMenuDirective } from './layouts/navbar/active-menu.directive';
 import { ErrorComponent } from './layouts/error/error.component';
+import { PagesModule } from './pages/pages.module';
+import { UserService } from './core/user/user.service';
+import { UserServiceMock } from './services/user.service.mock';
+import { CompanyService } from './entities/company/company.service';
+import { CompanyServiceMock } from './services/company.service.mock';
 
 @NgModule({
   imports: [
@@ -23,7 +28,12 @@ import { ErrorComponent } from './layouts/error/error.component';
     WirvsvirusHomeModule,
     // jhipster-needle-angular-add-module JHipster will add new module here
     WirvsvirusEntityModule,
-    WirvsvirusAppRoutingModule
+    WirvsvirusAppRoutingModule,
+    PagesModule
+  ],
+  providers: [
+    { provide: UserService, useClass: UserServiceMock },
+    { provide: CompanyService, useClass: CompanyServiceMock }
   ],
   declarations: [MainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],
   bootstrap: [MainComponent]

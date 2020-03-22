@@ -1,0 +1,11 @@
+<jhi-navigation-bar></jhi-navigation-bar>
+
+<jhi-search-bar></jhi-search-bar><button>Filter</button>
+
+<h3>Angebote in deiner Nähe</h3>
+
+<ul>
+  <li [routerLink]="['../', 'company-offer', company.id]" *ngFor="let company of companies$ | async">
+    {{ company.imgSrc }}, {{ company.name }}, {{ company.address }}
+  </li>
+</ul>
