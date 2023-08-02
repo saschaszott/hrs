@@ -1,3 +1,5 @@
+⚠️ This repository has been archived by the owner on Aug 2, 2023. It is now read-only and is **no longer maintained**.
+
 ![HumanResourceSharing Cover Image](/src/main/webapp/content/images/logo.png)
 
 # Human Resource Sharing
